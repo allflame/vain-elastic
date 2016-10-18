@@ -1,0 +1,14 @@
+parameters:
+  elastic.config.required.fields: ['hosts']
+
+services:
+  elastic.client:
+    class: Elasticsearch\Client
+    factory: ['@elastic.client.factory', getClient]
+    arguments:
+      - '@app.config'
+  elastic.client.factory.trust:
+    class: Vain\Elastic\Client\Factory\ElasticClientFactory
+  elastic.client.factory.assert:
+    class: Vain\Elastic\Client\Factory\Decorator\Assert\ElasticClientFactoryAssertDecorator
+    arguments: ['@elastic.client.factory.trust', '%elastic.config.required.fields%']
