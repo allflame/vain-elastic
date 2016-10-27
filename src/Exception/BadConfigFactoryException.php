@@ -28,6 +28,6 @@ class BadConfigFactoryException extends ElasticClientFactoryException
      */
     public function __construct(ElasticClientFactoryInterface $clientFactory)
     {
-        parent::__construct($clientFactory, 'Elastic config section should contain array', 0, null);
+        parent::__construct($clientFactory, 'Elastic config section should contain array');
     }
 }

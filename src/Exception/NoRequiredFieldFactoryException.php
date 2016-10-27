@@ -31,9 +31,7 @@ class NoRequiredFieldFactoryException extends ElasticClientFactoryException
     {
         parent::__construct(
             $clientFactory,
-            sprintf('Required field %s is missing from elastic config', $requiredField),
-            0,
-            null
+            sprintf('Required field %s is missing from elastic config', $requiredField)
         );
     }
 }

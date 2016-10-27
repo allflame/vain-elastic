@@ -28,6 +28,6 @@ class NoElasticConfigFactoryException extends ElasticClientFactoryException
      */
     public function __construct(ElasticClientFactoryInterface $clientFactory)
     {
-        parent::__construct($clientFactory, 'Config does not contain elastic section', 0, null);
+        parent::__construct($clientFactory, 'Config does not contain elastic section');
     }
 }

@@ -35,7 +35,7 @@ class ElasticClientFactoryException extends AbstractCoreException
     public function __construct(
         ElasticClientFactoryInterface $clientFactory,
         string $message,
-        int $code,
+        int $code = 500,
         \Exception $previous = null
     ) {
         $this->clientFactory = $clientFactory;
