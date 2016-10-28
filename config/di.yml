@@ -12,4 +12,5 @@ services:
   elastic.client.factory.assert:
     class: Vain\Elastic\Client\Factory\Decorator\Assert\ElasticClientFactoryAssertDecorator
     arguments: ['@elastic.client.factory.trust', '%elastic.config.required.fields%']
-  elastic.client.factory: '@elastic.client.factory.assert'
+  elastic.client.factory:
+    alias: elastic.client.factory.assert
