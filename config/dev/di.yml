@@ -1,0 +1,8 @@
+imports:
+  - { resource: '../di.yml' }
+
+services:
+  elastic.client.factory:
+    class: Vain\Elastic\Client\Factory\Decorator\Assert\ElasticClientFactoryAssertDecorator
+    decorates: elastic.client.factory
+    arguments: ['@elastic.client.factory.inner', '%elastic.config.required.fields%']
