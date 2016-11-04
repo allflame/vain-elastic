@@ -17,7 +17,7 @@
     "require": {
         "php": ">=7.0",
         "elasticsearch/elasticsearch": "^2.2",
-        "vain/core": "^0.3"
+        "vain/core": "^0.4"
     },
     "repositories": [
         {
